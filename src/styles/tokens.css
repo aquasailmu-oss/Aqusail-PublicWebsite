@@ -1,0 +1,110 @@
+/*
+ * AquaSail design tokens. The single source of colour, spacing and radius for
+ * the public website. Mirrored into tailwind.config.ts — never write a hex value
+ * in a component.
+ *
+ * Brand inks are fixed by the logo artwork (#00ADEF → #2C3792). sand, sand-deep,
+ * shell and foam are the only new colours: a marketing page needs a warm ground
+ * the admin UI never did. See docs/motion-reference.html §01.
+ */
+:root {
+  color-scheme: light;
+
+  /* brand — from the logo, never recoloured */
+  --brand-cyan: #00adef;
+  --brand-blue: #2c3792;
+  --brand-mid: #1673c0;
+  --brand-gradient: linear-gradient(90deg, var(--brand-cyan), var(--brand-blue));
+
+  /* inks — existing design system */
+  --accent-ink: #036695;
+  --ink: #12224a;
+  --ink-deep: #0b1733;
+  --ink-muted: #566481;
+
+  /* grounds — new for the public site */
+  --sand: #f4efe6;
+  --sand-deep: #e9e1d4;
+  --shell: #fbf8f3;
+  --foam: #9bd9f7;
+
+  /* status — existing design system */
+  --status-success: #1f7a4d;
+  --status-warning: #a15c00;
+  --status-danger: #b42318;
+  --status-info: #036695;
+
+  /* roles */
+  --page: var(--sand);
+  --card: #ffffff;
+  --text: var(--ink);
+  --text-soft: var(--ink-muted);
+  --on-dark: #f4efe6;
+  --on-dark-soft: rgba(244, 239, 230, 0.68);
+  --line: rgba(18, 34, 74, 0.14);
+  --line-dark: rgba(244, 239, 230, 0.18);
+  --focus-ring: var(--accent-ink);
+
+  /* 4px spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* radius scale */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* shadow scale */
+  --shadow-sm: 0 2px 8px rgba(18, 34, 74, 0.08);
+  --shadow-md: 0 10px 26px rgba(18, 34, 74, 0.16);
+  --shadow-lg: 0 18px 44px rgba(18, 34, 74, 0.18);
+
+  /* layout */
+  --gut: clamp(18px, 5vw, 64px);
+  --band: clamp(64px, 10vw, 132px);
+  --maxw: 1180px;
+
+  /* motion */
+  --ease: cubic-bezier(0.22, 0.7, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0a1430;
+    --card: #121f42;
+    --sand: #0a1430;
+    --sand-deep: #0e1938;
+    --shell: #101b3c;
+    --text: #efe9de;
+    --text-soft: #a9b6d0;
+    --line: rgba(239, 233, 222, 0.16);
+    --ink: #060d22;
+    --ink-deep: #04091a;
+    --accent-ink: #6cc7f0;
+    --focus-ring: var(--foam);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0a1430;
+  --card: #121f42;
+  --sand: #0a1430;
+  --sand-deep: #0e1938;
+  --shell: #101b3c;
+  --text: #efe9de;
+  --text-soft: #a9b6d0;
+  --line: rgba(239, 233, 222, 0.16);
+  --ink: #060d22;
+  --ink-deep: #04091a;
+  --accent-ink: #6cc7f0;
+  --focus-ring: var(--foam);
+}
