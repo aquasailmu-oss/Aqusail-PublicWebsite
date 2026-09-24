@@ -1,11 +1,34 @@
 /**
+ * The site's canonical origin. Empty or malformed values fall through rather
+ * than crash the build (`new URL("")` throws): NEXT_PUBLIC_SITE_URL, then
+ * Vercel's production domain, then the deployment URL, then localhost.
+ */
+function resolveSiteUrl(): string {
+  const candidates = [
+    process.env.NEXT_PUBLIC_SITE_URL,
+    process.env.VERCEL_PROJECT_PRODUCTION_URL,
+    process.env.VERCEL_URL,
+  ];
+  for (const raw of candidates) {
+    const v = raw?.trim();
+    if (!v) continue;
+    try {
+      return new URL(/^https?:\/\//.test(v) ? v : `https://${v}`).origin;
+    } catch {
+      /* try the next candidate */
+    }
+  }
+  return "http://localhost:3000";
+}
+
+/**
  * Business details shown on the site. Everything marked TODO must be replaced
  * with the real, checkable value before launch (build plan §11) — do not guess.
  */
 export const SITE = {
   name: "AquaSail Watersports",
   legalName: "AquaSail Watersports Ltd",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: resolveSiteUrl(),
   email: "aquasail.mu@gmail.com",
   // TODO(launch): real reception phone and WhatsApp numbers.
   phone: "+230 5 000 0000",
