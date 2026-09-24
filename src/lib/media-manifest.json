@@ -1,0 +1,551 @@
+{
+ "hero-le-morne": {
+  "src": "/media/hero-le-morne.jpg",
+  "width": 1920,
+  "height": 1134,
+  "source": "Wikimedia Commons",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Underwater_waterfall_Mauritius_HDR.jpg",
+  "author": "Christopher Brown",
+  "title": "File:Underwater waterfall Mauritius HDR.jpg"
+ },
+ "le-morne-aerial": {
+  "src": "/media/le-morne-aerial.jpg",
+  "width": 1920,
+  "height": 1279,
+  "source": "Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_southwest_coastline_of_Mauritius_with_an_underwater_waterfall_(53696882152).jpg",
+  "author": "\"dronepicr\"",
+  "title": "File:Aerial view of the southwest coastline of Mauritius with an underwater waterfall (53696882152).jpg"
+ },
+ "underwater-waterfall": {
+  "src": "/media/underwater-waterfall.jpg",
+  "width": 1920,
+  "height": 1279,
+  "source": "Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Underwater_waterfall_at_the_southwest_tip_of_Mauritius_(53697786471).jpg",
+  "author": "\"dronepicr\"",
+  "title": "File:Underwater waterfall at the southwest tip of Mauritius (53697786471).jpg"
+ },
+ "le-morne-lagoon": {
+  "src": "/media/le-morne-lagoon.jpg",
+  "width": 1920,
+  "height": 1279,
+  "source": "Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_underwater_waterfall_in_Mauritius_(53697770576).jpg",
+  "author": "\"dronepicr\"",
+  "title": "File:Aerial view of the underwater waterfall in Mauritius (53697770576).jpg"
+ },
+ "benitiers-le-morne": {
+  "src": "/media/benitiers-le-morne.jpg",
+  "width": 1920,
+  "height": 1235,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%C3%8Ele_aux_B%C3%A9nitiers_and_Le_Morne_(22937338593).jpg",
+  "author": "Lukas von Daeniken from Schweiz",
+  "title": "File:\u00cele aux B\u00e9nitiers and Le Morne (22937338593).jpg"
+ },
+ "crystal-rock": {
+  "src": "/media/crystal-rock.jpg",
+  "width": 1920,
+  "height": 1340,
+  "source": "Wikimedia Commons",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Le_corail_de_cristal_(Crystal_Coral_rock),_mars_2020_(3).jpg",
+  "author": "Beno\u00eet Prieur",
+  "title": "File:Le corail de cristal (Crystal Coral rock), mars 2020 (3).jpg"
+ },
+ "crystal-rock-2": {
+  "src": "/media/crystal-rock-2.jpg",
+  "width": 1920,
+  "height": 1029,
+  "source": "Wikimedia Commons",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Le_corail_de_cristal_(Crystal_Coral_rock),_mars_2020_(2).jpg",
+  "author": "Beno\u00eet Prieur",
+  "title": "File:Le corail de cristal (Crystal Coral rock), mars 2020 (2).jpg"
+ },
+ "benitiers-speedboat": {
+  "src": "/media/benitiers-speedboat.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Un_bateau_-_%C3%AEle_aux_B%C3%A9nitiers.jpg",
+  "author": "Beno\u00eet Prieur",
+  "title": "File:Un bateau - \u00eele aux B\u00e9nitiers.jpg"
+ },
+ "benitiers-boats": {
+  "src": "/media/benitiers-boats.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bateau_au_mouillage_-_%C3%8Ele_aux_B%C3%A9nitiers.jpg",
+  "author": "Beno\u00eet Prieur",
+  "title": "File:Bateau au mouillage - \u00cele aux B\u00e9nitiers.jpg"
+ },
+ "benitiers-blue-boat": {
+  "src": "/media/benitiers-blue-boat.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Un_bateau_bleu_au_mouillage_sur_l%27%C3%8Ele_aux_B%C3%A9nitiers.jpg",
+  "author": "Beno\u00eet Prieur",
+  "title": "File:Un bateau bleu au mouillage sur l'\u00cele aux B\u00e9nitiers.jpg"
+ },
+ "benitiers-beach": {
+  "src": "/media/benitiers-beach.jpg",
+  "width": 1920,
+  "height": 1062,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%C3%8Ele_aux_B%C3%A9nitiers_(23538328606).jpg",
+  "author": "Lukas von Daeniken from Schweiz",
+  "title": "File:\u00cele aux B\u00e9nitiers (23538328606).jpg"
+ },
+ "cerfs-aerial": {
+  "src": "/media/cerfs-aerial.jpg",
+  "width": 1920,
+  "height": 1438,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0 de",
+  "page": "https://commons.wikimedia.org/wiki/File:Mauritius_Ile_aux_Cerfs_aerial.jpg",
+  "author": "Arne M\u00fcseler",
+  "title": "File:Mauritius Ile aux Cerfs aerial.jpg"
+ },
+ "cerfs-aerial-2": {
+  "src": "/media/cerfs-aerial-2.jpg",
+  "width": 1920,
+  "height": 1438,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0 de",
+  "page": "https://commons.wikimedia.org/wiki/File:Mauritius_%C3%8Ele_aux_Cerfs.jpg",
+  "author": "Arne M\u00fcseler",
+  "title": "File:Mauritius \u00cele aux Cerfs.jpg"
+ },
+ "cerfs-lagoon": {
+  "src": "/media/cerfs-lagoon.jpg",
+  "width": 1651,
+  "height": 1238,
+  "source": "Wikimedia Commons",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:ILE_AUX_CERF-ISLAND.JPG",
+  "author": "Unknown",
+  "title": "File:ILE AUX CERF-ISLAND.JPG"
+ },
+ "cerfs-speedboat": {
+  "src": "/media/cerfs-speedboat.jpg",
+  "width": 1920,
+  "height": 1369,
+  "source": "Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%C3%8Ele_aux_Cerfs,_Mauritius.jpg",
+  "author": "Adamina",
+  "title": "File:\u00cele aux Cerfs, Mauritius.jpg"
+ },
+ "cerfs-shore": {
+  "src": "/media/cerfs-shore.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%C3%8Ele_aux_Cerfs,_%C3%AEle_Maurice.jpg",
+  "author": "Adamina",
+  "title": "File:\u00cele aux Cerfs, \u00eele Maurice.jpg"
+ },
+ "cerfs-beach": {
+  "src": "/media/cerfs-beach.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ile_aux_cerfes_strand_2019-09-29_6.jpg",
+  "author": "Z thomas",
+  "title": "File:Ile aux cerfes strand 2019-09-29 6.jpg"
+ },
+ "bluebay-lagoon": {
+  "src": "/media/bluebay-lagoon.jpg",
+  "width": 1920,
+  "height": 367,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:2006-10-04_Blue_Bay,_Mauritius_2.jpg",
+  "author": "Hansueli Krapf",
+  "title": "File:2006-10-04 Blue Bay, Mauritius 2.jpg"
+ },
+ "bluebay-reef": {
+  "src": "/media/bluebay-reef.jpg",
+  "width": 1920,
+  "height": 957,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Blue_Bay_Mauritius_(23456132492).jpg",
+  "author": "Lukas von Daeniken from Schweiz",
+  "title": "File:Blue Bay Mauritius (23456132492).jpg"
+ },
+ "bluebay-dawn": {
+  "src": "/media/bluebay-dawn.jpg",
+  "width": 1920,
+  "height": 1280,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mauritius_Dawn_(34354057762).jpg",
+  "author": "Mark Fischer",
+  "title": "File:Mauritius Dawn (34354057762).jpg"
+ },
+ "bluebay-beach": {
+  "src": "/media/bluebay-beach.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Blue_Bay_Mauritius_2014.jpg",
+  "author": "GrandEscogriffe",
+  "title": "File:Blue Bay Mauritius 2014.jpg"
+ },
+ "biches-aerial": {
+  "src": "/media/biches-aerial.jpg",
+  "width": 1920,
+  "height": 1279,
+  "source": "Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Turquoise_waters_at_Trou_aux_Biches_Beach,_Mauritius_(53696897047).jpg",
+  "author": "\"dronepicr\"",
+  "title": "File:Turquoise waters at Trou aux Biches Beach, Mauritius (53696897047).jpg"
+ },
+ "biches-sunset": {
+  "src": "/media/biches-sunset.jpg",
+  "width": 1920,
+  "height": 1149,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Trou_Aux_Biches_(23481831011).jpg",
+  "author": "Lukas von Daeniken from Schweiz",
+  "title": "File:Trou Aux Biches (23481831011).jpg"
+ },
+ "biches-sunset-2": {
+  "src": "/media/biches-sunset-2.jpg",
+  "width": 1920,
+  "height": 767,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Trou_Aux_Biches_(23455769142).jpg",
+  "author": "Lukas von Daeniken from Schweiz",
+  "title": "File:Trou Aux Biches (23455769142).jpg"
+ },
+ "biches-beach": {
+  "src": "/media/biches-beach.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Trou-aux-Biches_(5).jpg",
+  "author": "\u0428\u043e\u0445\u0431\u043e\u0437",
+  "title": "File:Trou-aux-Biches (5).jpg"
+ },
+ "grandbaie-boats": {
+  "src": "/media/grandbaie-boats.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Strand_grand-Baie_2019-09-27_2.jpg",
+  "author": "Z thomas",
+  "title": "File:Strand grand-Baie 2019-09-27 2.jpg"
+ },
+ "gabriel-island": {
+  "src": "/media/gabriel-island.jpg",
+  "width": 1920,
+  "height": 1280,
+  "source": "Wikimedia Commons",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Ilot_Gabriel_Mauritius_01.jpg",
+  "author": "Algonkins",
+  "title": "File:Ilot Gabriel Mauritius 01.jpg"
+ },
+ "parasail-turquoise": {
+  "src": "/media/parasail-turquoise.jpg",
+  "width": 1920,
+  "height": 1275,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Parasailing_over_the_Water.jpg",
+  "author": "Grand Velas Riviera Maya",
+  "title": "File:Parasailing over the Water.jpg"
+ },
+ "parasail-yacht": {
+  "src": "/media/parasail-yacht.jpg",
+  "width": 1920,
+  "height": 779,
+  "source": "Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Parasailing_from_a_yacht.jpg",
+  "author": "Helge V. Keitel",
+  "title": "File:Parasailing from a yacht.jpg"
+ },
+ "parasail-boat": {
+  "src": "/media/parasail-boat.jpg",
+  "width": 1920,
+  "height": 1042,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Parasailing_in_Prasonisi._Rhodes,_Greece.jpg",
+  "author": "\u0412\u0432\u043b\u0430\u0441\u0435\u043d\u043a\u043e",
+  "title": "File:Parasailing in Prasonisi. Rhodes, Greece.jpg"
+ },
+ "parasail-close": {
+  "src": "/media/parasail-close.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Parasailing_(35449647780).jpg",
+  "author": "Edgardo W. Olivera from Montevideo, Uruguay",
+  "title": "File:Parasailing (35449647780).jpg"
+ },
+ "snorkel-coral": {
+  "src": "/media/snorkel-coral.jpg",
+  "width": 1920,
+  "height": 1280,
+  "source": "Wikimedia Commons",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Snorkeler_surveying_giant_coral_(53555927201).jpg",
+  "author": "USFWS Pacific",
+  "title": "File:Snorkeler surveying giant coral (53555927201).jpg"
+ },
+ "snorkel-surface": {
+  "src": "/media/snorkel-surface.jpg",
+  "width": 1651,
+  "height": 1238,
+  "source": "Wikimedia Commons",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Snorkeling_in_the_Indian_Ocean_in_the_Maldives..JPG",
+  "author": "Rudolph.A.furtado",
+  "title": "File:Snorkeling in the Indian Ocean in the Maldives..JPG"
+ },
+ "snorkel-reef": {
+  "src": "/media/snorkel-reef.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:GBR-snorkeling-chris-brown.jpg",
+  "author": "Christo.j.brown",
+  "title": "File:GBR-snorkeling-chris-brown.jpg"
+ },
+ "turtle-surface": {
+  "src": "/media/turtle-surface.jpg",
+  "width": 1920,
+  "height": 1280,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Green_Sea_Turtle,_Ningaloo_Reef.jpg",
+  "author": "Nicole McLachlan",
+  "title": "File:Green Sea Turtle, Ningaloo Reef.jpg"
+ },
+ "turtle-reef": {
+  "src": "/media/turtle-reef.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Total_internal_reflection_of_Chelonia_mydas.jpg",
+  "author": "Brocken Inaglory",
+  "title": "File:Total internal reflection of Chelonia mydas.jpg"
+ },
+ "dolphins-pod": {
+  "src": "/media/dolphins-pod.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:A_pod_of_spinner_dolphins_in_the_Red_Sea.jpg",
+  "author": "Alexander Vasenin",
+  "title": "File:A pod of spinner dolphins in the Red Sea.jpg"
+ },
+ "dolphins-aerial": {
+  "src": "/media/dolphins-aerial.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:009_Pod_of_Spinner_dolphins_swimming_in_the_Indian_ocean_Photo_by_Giles_Laurent.jpg",
+  "author": "Giles Laurent",
+  "title": "File:009 Pod of Spinner dolphins swimming in the Indian ocean Photo by Giles Laurent.jpg"
+ },
+ "dolphins-coast": {
+  "src": "/media/dolphins-coast.jpg",
+  "width": 1920,
+  "height": 1281,
+  "source": "Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Spinner_Dolphins_-_Flickr_-_benmacaskill.jpg",
+  "author": "benmacaskill",
+  "title": "File:Spinner Dolphins - Flickr - benmacaskill.jpg"
+ },
+ "glass-bottom": {
+  "src": "/media/glass-bottom.jpg",
+  "width": 1920,
+  "height": 1440,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Glass_bottom_boat.jpg",
+  "author": "MichaelPloujnikov",
+  "title": "File:Glass bottom boat.jpg"
+ },
+ "catamaran-hk40": {
+  "src": "/media/catamaran-hk40.jpg",
+  "width": 1920,
+  "height": 1278,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:HK_40_Catamaran.jpg",
+  "author": "Raoul Bianchetti",
+  "title": "File:HK 40 Catamaran.jpg"
+ },
+ "catamaran-mauritius": {
+  "src": "/media/catamaran-mauritius.jpg",
+  "width": 1920,
+  "height": 1275,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mauritius_24.08.2009_07-41-42.jpg",
+  "author": "Simisa (talk\u00a0\u00b7 contribs)",
+  "title": "File:Mauritius 24.08.2009 07-41-42.jpg"
+ },
+ "catamaran-sail-red": {
+  "src": "/media/catamaran-sail-red.jpg",
+  "width": 1920,
+  "height": 1202,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Segelkatamaran_Typ_Dean_365_Name_TWIGA.JPG",
+  "author": "Twiganauten",
+  "title": "File:Segelkatamaran Typ Dean 365 Name TWIGA.JPG"
+ },
+ "reef-fish": {
+  "src": "/media/reef-fish.jpg",
+  "width": 1920,
+  "height": 1280,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sargento_Mayor_(Abudefduf_sexfasciatus),_Mauricio,_2025-09-24,_DD_92.jpg",
+  "author": "Diego Delso",
+  "title": "File:Sargento Mayor (Abudefduf sexfasciatus), Mauricio, 2025-09-24, DD 92.jpg"
+ },
+ "reef-triggerfish": {
+  "src": "/media/reef-triggerfish.jpg",
+  "width": 1920,
+  "height": 1280,
+  "source": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pez_ballesta_tit%C3%A1n_(Balistoides_viridescens),_Mauricio,_2025-09-23,_DD_29.jpg",
+  "author": "Diego Delso",
+  "title": "File:Pez ballesta tit\u00e1n (Balistoides viridescens), Mauricio, 2025-09-23, DD 29.jpg"
+ },
+ "diver-fish": {
+  "src": "/media/diver-fish.jpg",
+  "width": 2000,
+  "height": 1333,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1544551763-46a013bb70d5",
+  "author": "Unsplash contributor"
+ },
+ "reef-colour": {
+  "src": "/media/reef-colour.jpg",
+  "width": 2000,
+  "height": 1500,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1583212292454-1fe6229603b7",
+  "author": "Unsplash contributor"
+ },
+ "coral-garden": {
+  "src": "/media/coral-garden.jpg",
+  "width": 2000,
+  "height": 1500,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1546026423-cc4642628d2b",
+  "author": "Unsplash contributor"
+ },
+ "turtle-blue": {
+  "src": "/media/turtle-blue.jpg",
+  "width": 2000,
+  "height": 1250,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1437622368342-7a3d73a34c8f",
+  "author": "Unsplash contributor"
+ },
+ "fish-school": {
+  "src": "/media/fish-school.jpg",
+  "width": 2000,
+  "height": 1333,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1544551763-77ef2d0cfc6c",
+  "author": "Unsplash contributor"
+ },
+ "speed-yacht": {
+  "src": "/media/speed-yacht.jpg",
+  "width": 2000,
+  "height": 1375,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1605281317010-fe5ffe798166",
+  "author": "Unsplash contributor"
+ },
+ "boats-aerial": {
+  "src": "/media/boats-aerial.jpg",
+  "width": 2000,
+  "height": 2479,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1506929562872-bb421503ef21",
+  "author": "Unsplash contributor"
+ },
+ "boat-sandbank": {
+  "src": "/media/boat-sandbank.jpg",
+  "width": 2000,
+  "height": 1500,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1500514966906-fe245eea9344",
+  "author": "Unsplash contributor"
+ },
+ "diver-okay": {
+  "src": "/media/diver-okay.jpg",
+  "width": 2000,
+  "height": 1333,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1544551763-8dd44758c2dd",
+  "author": "Unsplash contributor"
+ },
+ "lagoon-palm": {
+  "src": "/media/lagoon-palm.jpg",
+  "width": 2000,
+  "height": 1335,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1535262412227-85541e910204",
+  "author": "Unsplash contributor"
+ },
+ "reef-deep": {
+  "src": "/media/reef-deep.jpg",
+  "width": 2000,
+  "height": 2667,
+  "source": "Unsplash",
+  "license": "Unsplash License",
+  "page": "https://unsplash.com/photos/1582967788606-a171c1080cb0",
+  "author": "Unsplash contributor"
+ }
+}

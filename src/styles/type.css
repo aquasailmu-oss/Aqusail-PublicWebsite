@@ -1,0 +1,95 @@
+/*
+ * Three voices. Jost 300 capitals for display, Sacramento for the script accent
+ * (above a display heading only, four words maximum), Source Sans 3 for body.
+ */
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.disp {
+  font-family: var(--font-display);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  line-height: 1.08;
+  font-size: clamp(28px, 4.6vw, 58px);
+  text-wrap: balance;
+  margin: 0;
+}
+.disp-md {
+  font-size: clamp(24px, 3.3vw, 40px);
+}
+.disp-sm {
+  font-size: clamp(20px, 2.4vw, 28px);
+}
+
+.script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  color: var(--accent-ink);
+  line-height: 0.9;
+  font-size: clamp(30px, 4.6vw, 56px);
+  display: block;
+}
+.on-dark .script,
+.band-ink .script {
+  color: var(--foam);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent-ink);
+}
+.on-dark .eyebrow,
+.band-ink .eyebrow {
+  color: var(--foam);
+}
+
+.sub {
+  color: var(--text-soft);
+  max-width: 60ch;
+  font-size: 17px;
+}
+
+.label-caps {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.prose {
+  max-width: 65ch;
+  font-size: 17px;
+}
+.prose p {
+  margin: 0 0 1.1em;
+}
+.prose h2,
+.prose h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 15px;
+  margin: 2em 0 0.6em;
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.2em;
+  margin: 0 0 1.1em;
+}
+.prose li {
+  margin-bottom: 0.35em;
+}
+.prose a {
+  color: var(--accent-ink);
+}
