@@ -20,7 +20,7 @@ export default function ContactPage() {
         title="Contact"
         lede="Send an enquiry and reception replies within one working day with availability and a quote. Nothing is booked or charged until you confirm."
       />
-      <section className="band band-sand" id="enquire">
+      <section className="band" id="enquire">
         <div className="wrap contact-grid">
           <div className="panel">
             <h2 className="disp disp-sm" style={{ marginBottom: 18 }}>

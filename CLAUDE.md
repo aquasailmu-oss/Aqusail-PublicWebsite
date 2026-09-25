@@ -26,7 +26,20 @@ DESIGN
   a shadow. Minimum width 120px, clear space 24px. `Logo` in
   src/components/site/Brand.tsx is a STAND-IN wordmark until aquasail-logo.svg
   is supplied — swap it there and only there.
-- One gradient element per screen, never behind text.
+- Backgrounds: sections paint NOTHING. Each page has one continuous
+  atmosphere (src/components/atmosphere, stops in src/lib/atmosphere.ts),
+  per docs/continuous-flow.md, which supersedes the band rhythm of
+  motion-reference.html §05. Never add a background to a section; a block
+  that needs a ground is an inset, rounded panel floating on the atmosphere.
+  Structure comes from rhythm of density: follow a busy passage with an
+  <Interlude> (one line, at least 40vh).
+- Any atmosphere stop must keep body text at 4.5:1 or better; darken the stop
+  rather than the text. Besides the atmosphere, one gradient element per
+  screen (the enquiry panel), never behind body text.
+- Craft (boats) appear only on home, activities, experiences, fleet and
+  contact. Partners, about and gallery stay still — deliberately.
+- Menu hover photographs live in src/lib/menu-images.json; after changing one
+  run `node scripts/menu-contrast.mjs --write`. Every item must reach 4.5:1.
 
 MOTION
 - docs/motion-cookbook.md is the source of truth for timings (its §4 tuning
@@ -34,7 +47,9 @@ MOTION
   only: power3.out for entrances, none for anything scrubbed. Smooth scroll
   stays on Lenis (owner decision: no structural change); the cookbook's
   data-speed parallax lives in ParallaxComposition, the sideways row in
-  DriftTrack (never pinned).
+  DriftTrack (never pinned). Atmosphere additions: gradient scrub 1.2, boat
+  travel scrubbed ease none, boat bob 2.8s sine.inOut yoyo, menu crossfade
+  0.6s power2.out, Ken Burns 8s.
 - gsap.from(), never gsap.to() from an invisible state. Nothing may rest at
   opacity:0 waiting for an observer — if JS fails the page must still read.
 - Reveals fire once. Scrubbed animations use ease:'none'.

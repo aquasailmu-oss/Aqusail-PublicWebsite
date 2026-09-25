@@ -29,7 +29,7 @@ button {
   outline-offset: 3px;
 }
 .on-dark :focus-visible,
-.band-ink :focus-visible {
+[data-tone="dark"] :focus-visible {
   outline-color: var(--foam);
 }
 .sr-only {
@@ -76,33 +76,17 @@ html.lenis body {
   padding-inline: var(--gut);
 }
 .band {
-  padding-block: var(--band);
+  /* Sections paint nothing: the page atmosphere is the only ground.
+     Spacing between passages: docs/continuous-flow.md §3.4. */
+  padding-block: clamp(120px, 18vh, 260px);
   position: relative;
   overflow-x: clip;
 }
 .band-tight {
-  padding-block: clamp(48px, 7vw, 88px);
+  padding-block: clamp(80px, 12vh, 160px);
 }
-.band-sand {
-  background: var(--sand);
-}
-.band-sand-deep {
-  background: var(--sand-deep);
-}
-.band-shell {
-  background: var(--shell);
-}
-.band-ink {
-  background: var(--ink);
-  color: var(--on-dark);
-}
-.band-ink .sub,
 .on-dark .sub {
   color: var(--on-dark-soft);
-}
-.band-grad {
-  background: var(--brand-gradient);
-  color: #fff;
 }
 .hd {
   display: flex;
@@ -186,17 +170,17 @@ html.lenis body {
   border-color: var(--ink-deep);
 }
 .on-dark .pill:not(.pill-solid),
-.band-ink .pill:not(.pill-solid) {
+[data-tone="dark"] .pill:not(.pill-solid) {
   background: transparent;
   color: var(--on-dark);
   border-color: var(--line-dark);
 }
 .on-dark .pill:not(.pill-solid):hover,
-.band-ink .pill:not(.pill-solid):hover {
+[data-tone="dark"] .pill:not(.pill-solid):hover {
   background: var(--on-dark);
   color: var(--ink);
 }
-.band-ink .pill-solid:hover,
+[data-tone="dark"] .pill-solid:hover,
 .on-dark .pill-solid:hover {
   background: var(--on-dark);
   color: var(--ink);
@@ -229,7 +213,7 @@ html.lenis body {
   color: var(--accent-ink);
   text-decoration: none;
 }
-.band-ink .link-arrow {
+[data-tone="dark"] .link-arrow {
   color: var(--foam);
 }
 .link-arrow .wave {
@@ -265,7 +249,7 @@ html.lenis body {
 .topbar.is-small {
   padding-block: 8px;
   padding-top: calc(8px + env(safe-area-inset-top, 0px));
-  background: color-mix(in srgb, var(--page) 84%, transparent);
+  background: var(--bar-ground);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 var(--line);
@@ -620,8 +604,7 @@ fieldset.fld {
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  background: var(--ink);
-  color: var(--on-dark);
+  color: var(--text);
   overflow: hidden;
   isolation: isolate;
   padding-top: calc(clamp(150px, 20vw, 220px) + env(safe-area-inset-top, 0px));
@@ -633,6 +616,9 @@ fieldset.fld {
   inset: 0;
   z-index: -2;
   overflow: hidden;
+  /* the photograph dissolves into the atmosphere: no edge */
+  -webkit-mask-image: linear-gradient(#000 58%, transparent);
+  mask-image: linear-gradient(#000 58%, transparent);
 }
 .hero-media img,
 .hero-media video {
@@ -640,11 +626,16 @@ fieldset.fld {
   height: 100%;
   object-fit: cover;
 }
+.hero:not(.hero-plain) {
+  color: var(--on-dark);
+}
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
+  -webkit-mask-image: linear-gradient(#000 58%, transparent);
+  mask-image: linear-gradient(#000 58%, transparent);
   background:
     linear-gradient(180deg, rgba(11, 23, 51, 0.62) 0%, rgba(11, 23, 51, 0.18) 38%, rgba(11, 23, 51, 0.5) 72%, rgba(11, 23, 51, 0.92) 100%),
     linear-gradient(90deg, rgba(11, 23, 51, 0.55) 0%, transparent 65%);
@@ -655,7 +646,7 @@ fieldset.fld {
   gap: 18px;
   max-width: 900px;
 }
-.hero .sub {
+.hero:not(.hero-plain) .sub {
   color: rgba(244, 239, 230, 0.86);
   font-size: clamp(16px, 1.6vw, 19px);
 }
@@ -671,7 +662,7 @@ fieldset.fld {
   padding-top: calc(clamp(130px, 16vw, 180px) + env(safe-area-inset-top, 0px));
 }
 .hero-plain::before {
-  background: radial-gradient(60% 90% at 80% 110%, rgba(0, 173, 239, 0.24), transparent 70%);
+  display: none;
 }
 .hero-actions {
   display: flex;
@@ -1002,7 +993,7 @@ fieldset.fld {
   color: var(--text-soft);
   white-space: nowrap;
 }
-.band-ink .badges li,
+[data-tone="dark"] .badges li,
 .on-dark .badges li {
   border-color: var(--line-dark);
   color: var(--on-dark-soft);
@@ -1144,7 +1135,7 @@ fieldset.fld {
   font-size: 12px;
   color: var(--accent-ink);
 }
-.band-ink .vessel-num {
+[data-tone="dark"] .vessel-num {
   color: var(--foam);
 }
 .vessel-stats {
@@ -1154,7 +1145,7 @@ fieldset.fld {
   padding-block: 12px;
   border-block: 1px solid var(--line);
 }
-.band-ink .vessel-stats {
+[data-tone="dark"] .vessel-stats {
   border-color: var(--line-dark);
 }
 .stat small {
@@ -1165,7 +1156,7 @@ fieldset.fld {
   font-size: 10px;
   color: var(--text-soft);
 }
-.band-ink .stat small {
+[data-tone="dark"] .stat small {
   color: var(--on-dark-soft);
 }
 .stat b {
@@ -1309,7 +1300,7 @@ fieldset.fld {
   counter-reset: step;
 }
 .steps li {
-  border-top: 1px solid var(--line-dark);
+  border-top: 1px solid var(--line);
   padding-top: 22px;
 }
 .steps .n {
@@ -1317,7 +1308,7 @@ fieldset.fld {
   font-weight: 200;
   font-size: 56px;
   line-height: 1;
-  color: var(--foam);
+  color: var(--accent-ink);
   display: block;
   margin-bottom: 14px;
 }
@@ -1331,15 +1322,20 @@ fieldset.fld {
 }
 .steps p {
   margin: 0;
-  color: var(--on-dark-soft);
+  color: var(--text-soft);
   font-size: 15px;
 }
 
 /* ---------- enquiry band ---------- */
 .cta-band {
-  padding-block: clamp(56px, 8vw, 104px);
+  padding-block: clamp(60px, 9vh, 130px);
 }
-.cta-band .wrap {
+.cta-panel {
+  background: var(--brand-gradient);
+  color: #fff;
+  border-radius: 28px;
+  padding: clamp(36px, 6vw, 80px) clamp(24px, 5vw, 72px);
+  box-shadow: 0 30px 80px rgba(6, 13, 34, 0.28);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1780,7 +1776,7 @@ fieldset.fld {
   border-radius: var(--radius-sm);
   white-space: nowrap;
 }
-.band-ink .todo,
+[data-tone="dark"] .todo,
 .on-dark .todo {
   color: #ffcf8a;
   background: rgba(255, 207, 138, 0.12);
@@ -1879,7 +1875,9 @@ fieldset.fld {
 
 /* ---------- footer ---------- */
 .site-footer {
-  background: var(--ink-deep);
+  /* a closing ground that fades in, so it never meets the page at an edge */
+  background: linear-gradient(transparent, var(--ink-deep) 220px);
+  padding-top: clamp(180px, 22vh, 280px) !important;
   color: var(--on-dark-soft);
   padding-block: clamp(56px, 8vw, 96px) 28px;
   font-size: 14.5px;
@@ -2041,11 +2039,11 @@ fieldset.fld {
   }
 }
 
-.band-ink .from,
+[data-tone="dark"] .from,
 .on-dark .from {
   color: var(--on-dark-soft);
 }
-.band-ink .from b,
+[data-tone="dark"] .from b,
 .on-dark .from b {
   color: var(--on-dark);
 }
@@ -2190,4 +2188,331 @@ fieldset.fld {
   font-size: 23px;
   line-height: 1;
   color: #2c3792;
+}
+
+/* ================================================================
+   Continuous atmosphere — docs/continuous-flow.md
+   ================================================================ */
+body {
+  background: #060d22; /* only ever seen behind the fixed atmosphere */
+}
+.shell {
+  position: relative;
+  isolation: isolate;
+}
+.site-main,
+.site-footer,
+.topbar {
+  position: relative;
+  z-index: 1;
+}
+.topbar {
+  position: fixed;
+  z-index: 60;
+}
+
+/* Surfaces: objects floating on the atmosphere. They reset the page tone. */
+.acard,
+.facts,
+.panel,
+.cred,
+.season,
+.tbl-wrap {
+  --card: var(--s-card);
+  --text: var(--s-text);
+  --text-soft: var(--s-soft);
+  --line: var(--s-line);
+  --accent-ink: var(--s-accent);
+  color: var(--text);
+}
+:is(.acard, .facts, .panel, .cred, .season, .tbl-wrap) :is(.eyebrow, .script, .label-caps) {
+  color: var(--accent-ink);
+}
+:is(.acard, .facts, .panel, .cred, .season, .tbl-wrap) .pill:not(.pill-solid) {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--line);
+}
+:is(.acard, .facts, .panel, .cred, .season, .tbl-wrap) .todo {
+  color: var(--status-warning);
+  background: color-mix(in srgb, var(--status-warning) 14%, transparent);
+}
+.facts,
+.panel,
+.cred,
+.season,
+.tbl-wrap,
+.acard {
+  background: var(--s-card);
+}
+
+/* Chips on a dark atmosphere */
+[data-tone="dark"] .chip {
+  background: rgba(244, 239, 230, 0.06);
+  color: var(--text);
+  border-color: var(--line);
+}
+[data-tone="dark"] .chip[aria-pressed="true"],
+[data-tone="dark"] .chip[aria-current="true"] {
+  background: var(--text);
+  color: #12224a;
+  border-color: var(--text);
+}
+[data-tone="dark"] .copy-btn:hover {
+  background: var(--text);
+  color: #12224a;
+}
+
+/* The fixed atmosphere: gradient ramp, haze, craft. Behind everything. */
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.atmos-gradient,
+.atmos-haze,
+.atmos-craft {
+  position: absolute;
+  inset: 0;
+}
+.atmos-ramp {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 300%; /* three viewports of journey, one visible at a time */
+  will-change: transform;
+}
+/* Depth cue (§3.5): a centre of light, under 8%, so the field is not flat paint */
+.atmos-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(90% 70% at 50% 42%, rgba(255, 255, 255, 0.05), transparent 70%),
+    linear-gradient(rgba(0, 0, 0, 0.06), transparent 22%, transparent 78%, rgba(0, 0, 0, 0.08));
+}
+[data-tone="light"] .atmos-vignette {
+  background:
+    radial-gradient(90% 70% at 50% 42%, rgba(255, 255, 255, 0.35), transparent 70%),
+    linear-gradient(rgba(18, 34, 74, 0.03), transparent 22%, transparent 78%, rgba(18, 34, 74, 0.05));
+}
+.haze-layer,
+.haze-glint {
+  position: absolute;
+  inset: -20%;
+  will-change: transform;
+}
+.haze-glint {
+  opacity: 0.14;
+  background: radial-gradient(18% 14% at 74% 22%, rgba(255, 236, 200, 0.95), transparent 70%);
+}
+.haze-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.haze-caustics {
+  opacity: 0.06;
+}
+.haze-contours {
+  opacity: 0.05;
+}
+.haze-palm {
+  inset: -4% auto auto -6%;
+  width: min(46vw, 620px);
+  height: auto;
+  color: #12224a;
+  opacity: 0.05;
+  rotate: 8deg;
+}
+
+.craft {
+  position: absolute;
+  left: 0;
+  color: #f4efe6;
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform;
+}
+.craft svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: currentColor;
+  position: relative;
+}
+.craft-bob {
+  position: relative;
+  opacity: 0.72; /* craft sit in the atmosphere, 0.5–0.85 */
+}
+.craft-wake {
+  position: absolute;
+  left: -30%;
+  right: 20%;
+  bottom: -6%;
+  height: 22%;
+  transform-origin: right center;
+  background: radial-gradient(50% 50% at 70% 50%, rgba(255, 255, 255, 0.55), transparent 70%);
+  opacity: 0.6;
+}
+.craft-parasail {
+  top: 0;
+  width: 9vw;
+}
+.craft-fleet {
+  top: 72%;
+  width: 16vw;
+}
+.craft-bubbles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+.craft-bubbles > svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200%;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.45);
+  stroke-width: 0.06;
+  will-change: transform;
+}
+
+/* Rhythm of density (§3.4): a quiet passage, one line on open atmosphere. */
+.interlude {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(60px, 9vh, 130px);
+}
+.interlude .wrap {
+  width: 100%;
+  text-align: center;
+}
+.interlude .script {
+  margin-bottom: 8px;
+}
+.interlude .disp {
+  max-width: 24ch;
+  margin-inline: auto;
+  font-weight: 200;
+}
+:is(.acard, .facts, .panel, .cred, .season, .tbl-wrap) .badges li {
+  border-color: var(--line);
+  color: var(--text-soft);
+}
+
+/* The enquiry panel's button stays white whatever the page tone. */
+.cta-panel .pill.pill-white {
+  background: #fff;
+  color: var(--brand-blue);
+  border-color: #fff;
+}
+.cta-panel .pill.pill-white:hover {
+  background: var(--ink-deep);
+  color: #fff;
+  border-color: var(--ink-deep);
+}
+
+/* ---------- menu hover photographs (docs/continuous-flow.md §6) ---------- */
+/* With nothing hovered: a calm brand gradient, so the first hover is an event. */
+.ov {
+  background:
+    radial-gradient(70% 60% at 82% 18%, rgba(0, 173, 239, 0.16), transparent 62%),
+    radial-gradient(60% 50% at 10% 90%, rgba(44, 55, 146, 0.35), transparent 70%),
+    var(--ink-deep);
+}
+.ov-top,
+.ov-body,
+.ov-foot {
+  position: relative;
+  z-index: 1;
+}
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.menu-photo {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu-photo img {
+  object-fit: cover;
+  will-change: transform;
+}
+/* Legibility without dimming the photograph: only the nav column is covered.
+   --k is the per-image scrimStrength measured by scripts/menu-contrast.mjs. */
+.menu-scrim {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: linear-gradient(
+    100deg,
+    rgb(6 13 34 / min(1, calc(0.78 * var(--k, 1)))) 0%,
+    rgb(6 13 34 / min(1, calc(0.52 * var(--k, 1)))) 26%,
+    rgb(6 13 34 / min(1, calc(0.18 * var(--k, 1)))) 42%,
+    transparent 56%
+  );
+}
+.ov nav a {
+  text-shadow: 0 2px 20px rgba(6, 13, 34, 0.6);
+}
+/* Nothing else sits on the untouched right side of the photograph. */
+.ov .ov-aside,
+.ov .ov-top .logo-link,
+.ov .ov-foot {
+  transition: opacity 0.6s var(--ease);
+}
+/* !important: the side panel carries a GSAP entrance whose inline opacity
+   would otherwise win and leave text sitting on the photograph. */
+.ov.has-photo .ov-aside,
+.ov.has-photo .ov-top .logo-link,
+.ov.has-photo .ov-foot {
+  opacity: 0 !important;
+  visibility: hidden;
+  transition:
+    opacity 0.6s var(--ease),
+    visibility 0s 0.6s;
+}
+.ov.has-photo .ov-top .pill {
+  background: rgba(6, 13, 34, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+/* Touch and small screens: a thumbnail slides in beside the focused item. */
+.mi-thumb {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-left: 6px;
+  align-self: center;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition:
+    opacity 0.4s var(--ease),
+    transform 0.4s var(--ease);
+}
+.mi-thumb img {
+  object-fit: cover;
+}
+.ov.thumbs nav a:focus-visible .mi-thumb,
+.ov.thumbs nav a:active .mi-thumb {
+  opacity: 1;
+  transform: none;
 }

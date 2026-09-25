@@ -14,7 +14,7 @@ export default function TermsPage() {
   return (
     <>
       <PageHero script="The small print" title="Terms" />
-      <section className="band band-sand">
+      <section className="band">
         <div className="wrap">
           <div className="prose">
             <p>

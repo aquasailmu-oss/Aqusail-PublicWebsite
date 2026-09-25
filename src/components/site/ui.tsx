@@ -38,7 +38,7 @@ type HeroProps = {
 export function PageHero({ script, title, lede, image, crumbs, children, home }: HeroProps) {
   return (
     <header
-      className={`hero on-dark ${home ? "hero-home" : "hero-page"} ${image ? "" : "hero-plain"}`}
+      className={`hero ${image ? "on-dark" : "hero-plain"} ${home ? "hero-home" : "hero-page"}`}
     >
       {image ? (
         <Parallax className="hero-media" hero amount={12}>
@@ -143,20 +143,41 @@ export function CtaBand({
   interest?: Interest;
 }) {
   return (
-    <section className="band-grad cta-band" aria-labelledby="cta-title">
+    // An inset panel floating on the atmosphere, never a full-bleed field.
+    <section className="cta-band" aria-labelledby="cta-title">
       <div className="wrap">
-        <div>
-          <span className="script">{script}</span>
-          <RevealLines as="h2" className="disp disp-md" id="cta-title">
-            {title}
-          </RevealLines>
+        <div className="cta-panel">
+          <div>
+            <span className="script">{script}</span>
+            <RevealLines as="h2" className="disp disp-md" id="cta-title">
+              {title}
+            </RevealLines>
+          </div>
+          <EnquireButton
+            interest={interest ?? { type: "general", label: "General enquiry" }}
+            className="pill pill-white"
+          >
+            Send an enquiry
+          </EnquireButton>
         </div>
-        <EnquireButton
-          interest={interest ?? { type: "general", label: "General enquiry" }}
-          className="pill pill-white"
-        >
-          Send an enquiry
-        </EnquireButton>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * A quiet passage: one line on open atmosphere, at least 40vh, nothing else.
+ * Since colour no longer marks sections, these are what make the next busy
+ * passage feel like an arrival (docs/continuous-flow.md §3.4).
+ */
+export function Interlude({ script, line }: { script?: string; line: string }) {
+  return (
+    <section className="interlude">
+      <div className="wrap">
+        {script ? <span className="script">{script}</span> : null}
+        <RevealLines as="p" className="disp disp-md">
+          {line}
+        </RevealLines>
       </div>
     </section>
   );

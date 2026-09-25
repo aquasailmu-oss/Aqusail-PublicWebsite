@@ -110,7 +110,7 @@ export function RelatedCard({
         {title}
         <Wave />
       </h3>
-      <p style={{ color: "var(--on-dark-soft)", marginTop: -8 }}>{text}</p>
+      <p style={{ color: "var(--text-soft)", marginTop: -8 }}>{text}</p>
     </Link>
   );
 }

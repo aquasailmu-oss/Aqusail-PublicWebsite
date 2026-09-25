@@ -15,7 +15,7 @@ export default function PrivacyPage() {
   return (
     <>
       <PageHero script="Plain and short" title="Privacy notice" />
-      <section className="band band-sand">
+      <section className="band">
         <div className="wrap">
           <div className="prose">
             <p>

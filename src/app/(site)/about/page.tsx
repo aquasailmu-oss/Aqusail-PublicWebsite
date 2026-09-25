@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Collage, RevealGroup, RevealLines } from "@/components/motion";
 import { AnchorNav } from "@/components/site/AnchorNav";
-import { CtaBand, PageHero } from "@/components/site/ui";
+import { CtaBand, Interlude, PageHero } from "@/components/site/ui";
 
 export const metadata: Metadata = {
   title: "About",
@@ -26,7 +26,7 @@ export default function AboutPage() {
         lede="A Mauritian watersports company with its own boats, its own crew and one simple rule: nobody goes out unless we would take our own family."
       />
 
-      <section className="band band-sand">
+      <section className="band">
         <div className="wrap with-anchors">
           <AnchorNav items={SECTIONS} />
           <div className="stack" style={{ gap: "clamp(64px, 9vw, 120px)" }}>
@@ -115,6 +115,7 @@ export default function AboutPage() {
               </RevealGroup>
             </section>
 
+            <Interlude line="Nobody goes out unless we would take our own family." />
             <section id="safety" aria-labelledby="safety-title">
               <span className="eyebrow">Safety and licensing</span>
               <RevealLines as="h2" className="disp disp-md" id="safety-title">

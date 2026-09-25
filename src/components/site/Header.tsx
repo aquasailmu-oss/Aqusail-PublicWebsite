@@ -7,6 +7,7 @@ import { NAV, SITE } from "@/lib/site";
 import { gsap } from "@/components/motion/gsap";
 import { Logo, Wave } from "./Brand";
 import { EnquireButton } from "./Enquiry";
+import { MenuBackdrop, MenuThumb, menuMode, type MenuMode } from "./MenuBackdrop";
 import { useDialog } from "./useDialog";
 
 /**
@@ -70,6 +71,16 @@ function OverlayMenu({
   const ref = useRef<HTMLDivElement>(null);
   useDialog(open, ref, onClose);
 
+  // Hover photographs: decided, and loaded, only when the menu first opens.
+  const [mode, setMode] = useState<MenuMode | null>(null);
+  const [active, setActive] = useState<string | null>(null);
+  useEffect(() => {
+    if (open && mode === null) setMode(menuMode());
+    if (!open) setActive(null);
+  }, [open, mode]);
+  // Hover and keyboard focus share one handler.
+  const show = (href: string) => mode === "images" && setActive(href);
+
   useEffect(() => {
     if (!open || !ref.current) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -88,7 +99,9 @@ function OverlayMenu({
     <div
       ref={ref}
       id="site-menu"
-      className={`ov on-dark${open ? " is-open" : ""}`}
+      className={`ov on-dark${open ? " is-open" : ""}${active ? " has-photo" : ""}${
+        mode === "thumbs" ? " thumbs" : ""
+      }`}
       role="dialog"
       aria-modal="true"
       aria-label="Site menu"
@@ -96,6 +109,9 @@ function OverlayMenu({
       onClick={(e) => e.target === e.currentTarget && onClose()}
       data-lenis-prevent
     >
+      {mode === "images" ? (
+        <MenuBackdrop hrefs={NAV.map((n) => n.href)} active={active} />
+      ) : null}
       <div className="ov-top">
         <button type="button" className="pill" onClick={onClose}>
           Close
@@ -106,7 +122,13 @@ function OverlayMenu({
         <span style={{ width: 90 }} aria-hidden="true" />
       </div>
       <div className="ov-body">
-        <nav aria-label="Main">
+        <nav
+          aria-label="Main"
+          onMouseLeave={() => setActive(null)}
+          onBlur={(e) => {
+            if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setActive(null);
+          }}
+        >
           <ul>
             {NAV.map((item, i) => (
               <li key={item.href} data-mi>
@@ -114,9 +136,12 @@ function OverlayMenu({
                   href={item.href}
                   aria-current={pathname.startsWith(item.href) ? "page" : undefined}
                   onClick={onClose}
+                  onMouseEnter={() => show(item.href)}
+                  onFocus={() => show(item.href)}
                 >
                   <em>{String(i + 1).padStart(2, "0")}</em>
                   {item.label}
+                  {mode === "thumbs" ? <MenuThumb href={item.href} /> : null}
                 </Link>
               </li>
             ))}

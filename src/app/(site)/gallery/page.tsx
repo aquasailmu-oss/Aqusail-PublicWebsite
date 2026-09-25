@@ -18,7 +18,7 @@ export default function GalleryPage() {
         image={{ path: "underwater-waterfall", alt: "The southwest tip of Mauritius from the air" }}
         lede="The lagoon, the reef and the animals that live in it, and the boats that take you there."
       />
-      <section className="band band-sand">
+      <section className="band">
         <div className="wrap">
           <Gallery items={galleryPhotos} layout="masonry" filters />
         </div>

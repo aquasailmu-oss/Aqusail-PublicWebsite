@@ -108,3 +108,53 @@
   --accent-ink: #6cc7f0;
   --focus-ring: var(--foam);
 }
+
+/*
+ * Page tone — docs/continuous-flow.md. Each page's atmosphere is either dark
+ * (text light) or light (text ink); see src/lib/atmosphere.ts. The atmosphere
+ * does not change with the visitor's colour scheme, so neither do these.
+ * Soft text on dark is 0.8 (not 0.68): it must hold 4.5:1 on the lagoon blues.
+ */
+[data-tone="dark"] {
+  --text: #f4efe6;
+  --text-soft: rgba(244, 239, 230, 0.8);
+  --line: rgba(244, 239, 230, 0.2);
+  --accent-ink: #9bd9f7;
+  --card: rgba(244, 239, 230, 0.07);
+  --bar-ground: rgba(6, 13, 34, 0.72);
+  color: var(--text);
+}
+[data-tone="light"] {
+  --text: #12224a;
+  --text-soft: #566481;
+  --line: rgba(18, 34, 74, 0.14);
+  --accent-ink: #036695;
+  --card: #ffffff;
+  --bar-ground: rgba(251, 248, 243, 0.84);
+  color: var(--text);
+}
+
+/* Surfaces — cards and panels that float on the atmosphere keep their own ink. */
+:root {
+  --s-card: #ffffff;
+  --s-text: #12224a;
+  --s-soft: #566481;
+  --s-line: rgba(18, 34, 74, 0.14);
+  --s-accent: #036695;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --s-card: #121f42;
+    --s-text: #efe9de;
+    --s-soft: #a9b6d0;
+    --s-line: rgba(239, 233, 222, 0.16);
+    --s-accent: #6cc7f0;
+  }
+}
+:root[data-theme="dark"] {
+  --s-card: #121f42;
+  --s-text: #efe9de;
+  --s-soft: #a9b6d0;
+  --s-line: rgba(239, 233, 222, 0.16);
+  --s-accent: #6cc7f0;
+}

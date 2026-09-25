@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ParallaxComposition, RevealGroup, RevealLines } from "@/components/motion";
 import { Wave } from "@/components/site/Brand";
-import { CtaBand, PageHero, Photo, SectionHead } from "@/components/site/ui";
+import { CtaBand, Interlude, PageHero, Photo, SectionHead } from "@/components/site/ui";
 import { getResources } from "@/lib/data";
 
 export const revalidate = 300;
@@ -24,12 +24,22 @@ export default async function FleetPage() {
         image={{ path: "boats-aerial", alt: "Boats on turquoise water seen from above" }}
         lede="Four boats, maintained by the crew who sail them. Each one runs our scheduled trips and can be chartered privately for your own group."
       />
-      <section className="band band-sand">
+      <section className="band">
         <div className="wrap">
           <RevealGroup className="vessels" start="top 90%">
             {resources.map((r, i) => {
               return (
-                <article key={r.id} className="vessel">
+                <article
+                  key={r.id}
+                  className="vessel"
+                  data-craft={
+                    r.slug === "cataspeed"
+                      ? "powercat"
+                      : r.slug === "speed-boat"
+                        ? "speedboat"
+                        : "catamaran"
+                  }
+                >
                   <Link
                     href={`/fleet/${r.slug}`}
                     className="vessel-media"
@@ -75,8 +85,9 @@ export default async function FleetPage() {
           </RevealGroup>
         </div>
       </section>
+      <Interlude line="Maintained by the people who sail them." />
       {/* parallax.layers — docs/motion-cookbook.md §3.3 */}
-      <section className="band band-ink" aria-labelledby="aboard-title">
+      <section className="band" aria-labelledby="aboard-title">
         <div className="wrap split">
           <div>
             <SectionHead

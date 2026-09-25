@@ -9,7 +9,7 @@ import {
 import { Wave } from "@/components/site/Brand";
 import { ActivityCard, PackageCard, VesselCard } from "@/components/site/cards";
 import { EnquireButton } from "@/components/site/Enquiry";
-import { ArrowLink, CtaBand, PageHero, Photo, SectionHead } from "@/components/site/ui";
+import { ArrowLink, CtaBand, Interlude, PageHero, Photo, SectionHead } from "@/components/site/ui";
 import { getActivities, getPackages, getResources } from "@/lib/data";
 import { SITE } from "@/lib/site";
 
@@ -72,7 +72,7 @@ export default async function HomePage() {
       </PageHero>
 
       {/* 2 · INTRO — sand */}
-      <section className="band band-sand" aria-labelledby="intro-title">
+      <section className="band" aria-labelledby="intro-title">
         <div className="wrap split">
           <div className="stack">
             <span className="eyebrow">AquaSail Watersports · Mauritius</span>
@@ -121,7 +121,7 @@ export default async function HomePage() {
       </section>
 
       {/* 3 · ACTIVITIES — shell */}
-      <section className="band band-shell" aria-labelledby="act-title">
+      <section className="band" aria-labelledby="act-title">
         <div className="wrap">
           <SectionHead
             id="act-title"
@@ -139,8 +139,12 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <Interlude
+        script="Before ten"
+        line="The water is at its clearest in the morning, before the wind comes up."
+      />
       {/* 4 · EXPERIENCES — ink */}
-      <section className="band band-ink" aria-labelledby="exp-title">
+      <section className="band" aria-labelledby="exp-title">
         <div className="wrap">
           <SectionHead
             id="exp-title"
@@ -158,12 +162,9 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <Interlude line="Every day ends back at the jetty, with time to spare." />
       {/* 5 · FLEET — sand */}
-      <section
-        className="band band-sand"
-        aria-labelledby="fleet-title"
-        style={{ overflow: "hidden" }}
-      >
+      <section className="band" aria-labelledby="fleet-title" style={{ overflow: "hidden" }}>
         <Marquee label="Our boats">
           {resources.map((r) => (
             <span key={r.id} className="mq-item">
@@ -188,9 +189,10 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <Interlude line="One crew, who know every boat they sail." />
       {/* 5b · FROM THE BOAT — ink. drift.horizontal, docs/motion-cookbook.md §3.4 */}
       <section
-        className="band band-ink"
+        className="band"
         aria-labelledby="drift-title"
         style={{ paddingBottom: "clamp(40px, 6vw, 80px)" }}
       >
@@ -257,8 +259,12 @@ export default async function HomePage() {
         />
       </section>
 
+      <Interlude
+        script="Stay a while"
+        line="From the boat, the lagoon has more colours than names."
+      />
       {/* 6 · WHY US — shell */}
-      <section className="band band-shell" aria-labelledby="why-title">
+      <section className="band" aria-labelledby="why-title">
         <div className="wrap split" style={{ alignItems: "center" }}>
           <Collage
             items={[

@@ -5,7 +5,7 @@ import { RelatedCard } from "@/components/site/cards";
 import { EnquireButton } from "@/components/site/Enquiry";
 import { Gallery } from "@/components/site/Gallery";
 import { BreadcrumbJsonLd } from "@/components/site/JsonLd";
-import { CtaBand, PageHero, Prose, SectionHead } from "@/components/site/ui";
+import { CtaBand, Interlude, PageHero, Prose, SectionHead } from "@/components/site/ui";
 import { ACTIVITY_TYPE_LABEL, getActivities, getActivity, packagesContaining } from "@/lib/data";
 import { formatDuration } from "@/lib/dates";
 import { mediaUrl } from "@/lib/media";
@@ -63,7 +63,7 @@ export default async function ActivityPage({ params }: Params) {
         image={{ path: a.hero_image, alt: a.gallery[0]?.alt ?? a.name }}
       />
 
-      <section className="band band-sand">
+      <section className="band">
         <div className="wrap detail">
           <div>
             <span className="eyebrow">About this activity</span>
@@ -98,7 +98,7 @@ export default async function ActivityPage({ params }: Params) {
       </section>
 
       {a.gallery.length ? (
-        <section className="band band-shell band-tight">
+        <section className="band band-tight">
           <div className="wrap">
             <SectionHead eyebrow="Gallery" title="What to expect" />
             <Gallery items={a.gallery} />
@@ -106,8 +106,9 @@ export default async function ActivityPage({ params }: Params) {
         </section>
       ) : null}
 
+      <Interlude line="Most guests pair it with something else on the same day." />
       {related.length ? (
-        <section className="band band-ink">
+        <section className="band">
           <div className="wrap">
             <SectionHead
               eyebrow="Included in these experiences"

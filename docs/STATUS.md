@@ -11,6 +11,7 @@ charter price cards. Charter pages show what a charter includes instead.
 | W-03 Layout shell | done | fixed header (shrinks, never hides), overlay menu with focus trap, footer, Lenis |
 | W-04 Motion library | done | RevealLines (SplitText), RevealGroup, Parallax, ArchImage, Collage, Marquee; `/motion-test` |
 | Motion cookbook | done | tuning table applied; marquee hover slowdown + scroll-velocity surge; new `ParallaxComposition` (experiences, fleet) and `DriftTrack` (home); both on `/motion-test`. Lenis kept instead of ScrollSmoother |
+| Continuous atmosphere | done | docs/continuous-flow.md A–C: section bands removed; one scroll-driven gradient per page with haze and craft per the §4 table; interludes for rhythm; menu hover photographs with measured scrims (all ≥ 4.5:1). Adds ~9KB per page; menu photos 626KB on open |
 | W-05 Home | done | all seven bands; hero uses a poster image — **no video yet** |
 | W-06 Activities | done | URL-backed filter chips, detail with facts card, gallery, related experiences |
 | W-07 Experiences | done | arch hero, generated "what's included", build-your-own panel |
@@ -32,3 +33,7 @@ charter price cards. Charter pages show what a charter includes instead.
   are not of AquaSail's own boats (Cataspeed is shown with a monohull motor yacht). Two were cropped to
   remove date stamps (cerfs-lagoon, snorkel-surface).
 - **Legal**: privacy and terms pages need review by someone qualified.
+- **Boat silhouettes** in the atmosphere are drawn stand-ins (`src/components/atmosphere/Craft.tsx`);
+  replace with cut-outs from AquaSail's own fleet photography.
+- **Experiences midday colour**: the doc's `#00ADEF` failed text contrast (2.2:1) and was darkened to
+  `#035D88`. Decide with the owner whether to keep it.
