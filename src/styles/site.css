@@ -1462,7 +1462,7 @@ fieldset.fld {
 .specs div {
   padding: 22px 18px 22px 0;
 }
-.specs small {
+.specs dt {
   display: block;
   font-family: var(--font-display);
   text-transform: uppercase;
@@ -1471,7 +1471,7 @@ fieldset.fld {
   color: var(--on-dark-soft);
   margin-bottom: 6px;
 }
-.specs b {
+.specs dd {
   font-family: var(--font-display);
   font-weight: 300;
   font-size: clamp(20px, 2.2vw, 28px);
@@ -1771,7 +1771,7 @@ fieldset.fld {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.78em;
   background: color-mix(in srgb, var(--status-warning) 14%, transparent);
-  color: var(--status-warning);
+  color: var(--status-warning-text);
   padding: 1px 6px;
   border-radius: var(--radius-sm);
   white-space: nowrap;
@@ -2047,7 +2047,7 @@ fieldset.fld {
 .on-dark .from b {
   color: var(--on-dark);
 }
-.specs b {
+.specs dd {
   font-size: clamp(17px, 1.7vw, 24px);
 }
 .prose h2.disp {
@@ -2234,7 +2234,7 @@ body {
   border-color: var(--line);
 }
 :is(.acard, .facts, .panel, .cred, .season, .tbl-wrap) .todo {
-  color: var(--status-warning);
+  color: var(--status-warning-text);
   background: color-mix(in srgb, var(--status-warning) 14%, transparent);
 }
 .facts,
@@ -2515,4 +2515,19 @@ body {
 .ov.thumbs nav a:active .mi-thumb {
   opacity: 1;
   transform: none;
+}
+
+.specs {
+  margin: 0;
+}
+.specs dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 300;
+}
+
+/* The ground behind the fixed atmosphere — seen only on overscroll bounce and
+   by tools. It follows the page tone so light pages never flash navy. */
+body:has(.shell[data-tone="light"]) {
+  background: #f4efe6;
 }

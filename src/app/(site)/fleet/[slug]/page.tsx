@@ -7,7 +7,6 @@ import { Gallery } from "@/components/site/Gallery";
 import { BreadcrumbJsonLd } from "@/components/site/JsonLd";
 import { CtaBand, Interlude, PageHero, Prose, SectionHead } from "@/components/site/ui";
 import { getResource, getResources, packagesServedBy } from "@/lib/data";
-import { mediaUrl } from "@/lib/media";
 
 export const revalidate = 300;
 
@@ -24,7 +23,6 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: r.seo_title ?? r.name,
     description: r.seo_description ?? r.summary,
     alternates: { canonical: `/fleet/${r.slug}` },
-    openGraph: { images: [mediaUrl(r.hero_image).src] },
   };
 }
 
@@ -53,8 +51,8 @@ export default async function VesselPage({ params }: Params) {
         <dl className="specs" style={{ marginTop: 26 }}>
           {Object.entries(r.specs).map(([k, v]) => (
             <div key={k}>
-              <small>{k}</small>
-              <b>{v}</b>
+              <dt>{k}</dt>
+              <dd>{v}</dd>
             </div>
           ))}
         </dl>

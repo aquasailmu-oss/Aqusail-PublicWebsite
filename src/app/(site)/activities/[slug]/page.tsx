@@ -26,7 +26,6 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: a.seo_title ?? a.name,
     description: a.seo_description ?? a.summary,
     alternates: { canonical: `/activities/${a.slug}` },
-    openGraph: { images: [mediaUrl(a.hero_image).src] },
   };
 }
 

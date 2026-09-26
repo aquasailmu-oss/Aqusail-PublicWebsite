@@ -40,6 +40,7 @@ export default async function ActivitiesPage() {
       />
       <section className="band">
         <div className="wrap">
+          <h2 className="sr-only">All activities</h2>
           <Suspense fallback={<div className="card-grid">{cards}</div>}>
             <ActivityFilter types={types}>{cards}</ActivityFilter>
           </Suspense>

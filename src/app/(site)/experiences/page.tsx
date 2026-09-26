@@ -26,6 +26,7 @@ export default async function ExperiencesPage() {
       />
       <section className="band">
         <div className="wrap">
+          <h2 className="sr-only">All experiences</h2>
           <RevealGroup className="card-grid">
             {packages.map((p) => (
               <PackageCard key={p.id} p={p} />
