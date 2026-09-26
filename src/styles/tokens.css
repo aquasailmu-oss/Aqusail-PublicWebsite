@@ -31,6 +31,7 @@
   /* status — existing design system */
   --status-success: #1f7a4d;
   --status-warning: #a15c00;
+  --status-warning-text: #8a4d00; /* 5.5:1 on its own 14% tint */
   --status-danger: #b42318;
   --status-info: #036695;
 

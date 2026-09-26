@@ -8,7 +8,6 @@ import { BreadcrumbJsonLd } from "@/components/site/JsonLd";
 import { CtaBand, Interlude, Photo, Prose, SectionHead } from "@/components/site/ui";
 import { getPackage, getPackages } from "@/lib/data";
 import { formatDuration } from "@/lib/dates";
-import { mediaUrl } from "@/lib/media";
 
 export const revalidate = 300;
 
@@ -25,7 +24,6 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: p.seo_title ?? p.name,
     description: p.seo_description ?? p.summary,
     alternates: { canonical: `/experiences/${p.slug}` },
-    openGraph: { images: [mediaUrl(p.hero_image).src] },
   };
 }
 

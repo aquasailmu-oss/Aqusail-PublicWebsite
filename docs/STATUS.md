@@ -20,8 +20,8 @@ charter price cards. Charter pages show what a charter includes instead.
 | W-10 Partners | done | steps, capacity table, partner form; logo marquee omitted until real logos exist |
 | W-11 About, gallery, contact, legal | done | legal text is a DRAFT marked for review |
 | W-12 Media pipeline | not started | photos are local stand-ins in `public/media/` |
-| W-13 SEO | partial | metadata, canonicals, sitemap, robots, JSON-LD; no OG image route or analytics yet |
-| W-14 Launch pass | not started | |
+| W-13 SEO | done except analytics | metadata, canonicals, sitemap, robots, JSON-LD, generated share images (home + every activity, experience and boat; Jost, no prices). Analytics not added — needs an owner choice of provider (privacy notice already promises cookieless, no form data) |
+| W-14 Launch pass | partial | done: security headers + CSP, error page, axe WCAG 2.1 AA clean on all 28 pages (`npm run audit:a11y`), Lighthouse a11y/best-practices/SEO 100. Performance: warm-cache LCP ≈1.4s on a simulated slow-4G phone, unchanged by the atmosphere; Lighthouse perf medians 79–89 in this codespace (noisy, 2 cores) — re-measure on the Vercel preview with `SHOT_BASE=<url> npm run audit:lighthouse`. Remaining: real content (placeholders below), analytics, run the enquiry path against real Supabase |
 | WP-22 Enquiries inbox | n/a | belongs in the operations platform repo |
 
 ## Placeholders to replace before launch
@@ -33,6 +33,10 @@ charter price cards. Charter pages show what a charter includes instead.
   are not of AquaSail's own boats (Cataspeed is shown with a monohull motor yacht). Two were cropped to
   remove date stamps (cerfs-lagoon, snorkel-surface).
 - **Legal**: privacy and terms pages need review by someone qualified.
+- **Self-hosting only**: in this codespace a long-running `next start` once left single image variants
+  stuck mid-encode (requests hung; a restart cleared it; not reproducible on demand). Vercel resizes
+  images with its own service, so this does not apply there. If the site is ever self-hosted, watch
+  `/_next/image` latency.
 - **Boat silhouettes** in the atmosphere are drawn stand-ins (`src/components/atmosphere/Craft.tsx`);
   replace with cut-outs from AquaSail's own fleet photography.
 - **Experiences midday colour**: the doc's `#00ADEF` failed text contrast (2.2:1) and was darkened to
