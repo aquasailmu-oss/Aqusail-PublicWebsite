@@ -453,6 +453,16 @@ Then run npm run shot on /, /activities and /fleet and look at the screenshots.
 Report anything in the table you could not rule out.
 ```
 
+### Atmosphere additions (docs/continuous-flow.md §8)
+
+| Effect | Duration | Ease | Trigger |
+| --- | --- | --- | --- |
+| Atmosphere gradient | scrubbed | `none` | whole page, `scrub: 1.2` |
+| Boat travel | scrubbed | `none` | page depth |
+| Boat bob | 2.8s yoyo | `sine.inOut` | always |
+| Menu crossfade | 0.6s (0.8s back to neutral) | `power2.out` | hover / focus |
+| Ken Burns | 8s | `none` | active menu photo |
+
 ---
 
 ## 7. Where to learn more

@@ -1,0 +1,33 @@
+{
+  "_comment": "Overlay menu hover photographs (docs/continuous-flow.md §6). scrim is the per-image scrimStrength, 0.8–1.4, MEASURED by scripts/menu-contrast.mjs — do not guess it.",
+  "items": {
+    "/activities": {
+      "path": "parasail-turquoise",
+      "scrim": 1.1
+    },
+    "/experiences": {
+      "path": "cerfs-aerial",
+      "scrim": 1.05
+    },
+    "/fleet": {
+      "path": "catamaran-hk40",
+      "scrim": 1.25
+    },
+    "/partners": {
+      "path": "grandbaie-boats",
+      "scrim": 0.8
+    },
+    "/about": {
+      "path": "crystal-rock",
+      "scrim": 1.1
+    },
+    "/gallery": {
+      "path": "hero-le-morne",
+      "scrim": 1.1
+    },
+    "/contact": {
+      "path": "biches-sunset",
+      "scrim": 1.4
+    }
+  }
+}

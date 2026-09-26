@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { RevealGroup } from "@/components/motion";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
-import { PageHero, SectionHead } from "@/components/site/ui";
+import { Interlude, PageHero, SectionHead } from "@/components/site/ui";
 import { getActivities, getResources } from "@/lib/data";
 import { formatDuration } from "@/lib/dates";
 
@@ -40,7 +40,7 @@ export default async function PartnersPage() {
         }
       />
 
-      <section className="band band-ink" aria-labelledby="how-title">
+      <section className="band" aria-labelledby="how-title">
         <div className="wrap">
           <SectionHead
             id="how-title"
@@ -76,7 +76,8 @@ export default async function PartnersPage() {
         </div>
       </section>
 
-      <section className="band band-sand" aria-labelledby="cap-title">
+      <Interlude line="Your guests, looked after from the jetty onwards." />
+      <section className="band" aria-labelledby="cap-title">
         <div className="wrap">
           <SectionHead
             id="cap-title"
@@ -113,7 +114,8 @@ export default async function PartnersPage() {
 
       {/* Partner logo marquee omitted until real partner logos exist. */}
 
-      <section className="band band-shell" id="enquire" aria-labelledby="partner-form-title">
+      <Interlude line="A named contact, and a monthly statement that matches your own." />
+      <section className="band" id="enquire" aria-labelledby="partner-form-title">
         <div className="wrap contact-grid">
           <div className="panel">
             <h2 id="partner-form-title" className="disp disp-sm" style={{ marginBottom: 18 }}>

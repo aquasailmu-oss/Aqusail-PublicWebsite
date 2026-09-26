@@ -25,7 +25,7 @@ export default function MotionTest() {
         lede="reveal.lines runs on this heading. Scroll for the rest."
       />
 
-      <section className="band band-sand">
+      <section className="band">
         <div className="wrap">
           <SectionHead
             eyebrow="reveal.lines"
@@ -43,7 +43,7 @@ export default function MotionTest() {
         </div>
       </section>
 
-      <section className="band band-ink">
+      <section className="band">
         <div className="wrap split">
           <div className="stack">
             <span className="eyebrow">parallax.drift</span>
@@ -60,7 +60,7 @@ export default function MotionTest() {
         </div>
       </section>
 
-      <section className="band band-shell">
+      <section className="band">
         <div className="wrap split">
           <div className="stack">
             <span className="eyebrow">collage.scatter</span>
@@ -103,7 +103,7 @@ export default function MotionTest() {
         </div>
       </section>
 
-      <section className="band band-shell">
+      <section className="band">
         <div className="wrap split">
           <span className="eyebrow">parallax.layers · 1.0 / 0.85 / 1.15</span>
           <ParallaxComposition
@@ -118,7 +118,7 @@ export default function MotionTest() {
         </div>
       </section>
 
-      <section className="band band-ink">
+      <section className="band">
         <div className="wrap">
           <span className="eyebrow">drift.horizontal · not pinned</span>
         </div>
@@ -140,7 +140,7 @@ export default function MotionTest() {
         />
       </section>
 
-      <section className="band band-sand" style={{ overflow: "hidden" }}>
+      <section className="band" style={{ overflow: "hidden" }}>
         <div className="wrap">
           <span className="eyebrow">marquee.loop</span>
         </div>
@@ -161,11 +161,11 @@ export default function MotionTest() {
         </Marquee>
       </section>
 
-      <section className="band band-ink">
+      <section className="band">
         <div className="wrap">
-          <span className="eyebrow">field.swap</span>
+          <span className="eyebrow">atmosphere · docs/continuous-flow.md</span>
           <RevealLines className="disp disp-md">
-            Sand, ink, shell: the band edges are the transition
+            No band edges: one atmosphere descends behind the whole page
           </RevealLines>
         </div>
       </section>

@@ -30,7 +30,9 @@ export function RevealLines({ as = "h2", className, children, immediate, delay =
       mask: "lines",
       linesClass: "rl-line",
       autoSplit: true,
-      aria: "auto",
+      // aria-label is only allowed on headings here; a split into lines keeps
+      // whole words in reading order, so other tags need no ARIA at all.
+      aria: /^h[1-6]$/.test(as) ? "auto" : "none",
       onSplit(self) {
         return gsap.from(self.lines, {
           yPercent: 110,

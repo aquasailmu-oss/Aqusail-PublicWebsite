@@ -3,7 +3,7 @@ import { Wave } from "@/components/site/Brand";
 
 export default function NotFound() {
   return (
-    <section className="hero hero-plain on-dark not-found">
+    <section className="hero hero-plain not-found">
       <div className="wrap">
         <div className="hero-content">
           <span className="script">Off course</span>

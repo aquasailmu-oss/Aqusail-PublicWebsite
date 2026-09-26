@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ParallaxComposition, RevealGroup } from "@/components/motion";
 import { PackageCard } from "@/components/site/cards";
 import { EnquireButton } from "@/components/site/Enquiry";
-import { PageHero, SectionHead } from "@/components/site/ui";
+import { Interlude, PageHero, SectionHead } from "@/components/site/ui";
 import { getPackages } from "@/lib/data";
 
 export const revalidate = 300;
@@ -24,8 +24,9 @@ export default async function ExperiencesPage() {
         image={{ path: "cerfs-aerial-2", alt: "An island and its lagoon from the air" }}
         lede="Whole and half days that put several activities together, timed around the tide and the light. What is included is listed on each one, and lunch is on board where it says so."
       />
-      <section className="band band-ink">
+      <section className="band">
         <div className="wrap">
+          <h2 className="sr-only">All experiences</h2>
           <RevealGroup className="card-grid">
             {packages.map((p) => (
               <PackageCard key={p.id} p={p} />
@@ -33,8 +34,9 @@ export default async function ExperiencesPage() {
           </RevealGroup>
         </div>
       </section>
+      <Interlude line="Every planned day follows the tide, not the clock." />
       {/* parallax.layers — docs/motion-cookbook.md §3.3 */}
-      <section className="band band-shell" aria-labelledby="day-title">
+      <section className="band" aria-labelledby="day-title">
         <div className="wrap split">
           <ParallaxComposition
             base={{
@@ -83,7 +85,8 @@ export default async function ExperiencesPage() {
           </div>
         </div>
       </section>
-      <section className="band band-sand band-tight" aria-labelledby="byo-title">
+      <Interlude line="Nothing is booked until you say yes." />
+      <section className="band band-tight" aria-labelledby="byo-title">
         <div className="wrap split">
           <SectionHead
             id="byo-title"

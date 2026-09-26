@@ -5,9 +5,8 @@ import { RelatedCard } from "@/components/site/cards";
 import { EnquireButton } from "@/components/site/Enquiry";
 import { Gallery } from "@/components/site/Gallery";
 import { BreadcrumbJsonLd } from "@/components/site/JsonLd";
-import { CtaBand, PageHero, Prose, SectionHead } from "@/components/site/ui";
+import { CtaBand, Interlude, PageHero, Prose, SectionHead } from "@/components/site/ui";
 import { getResource, getResources, packagesServedBy } from "@/lib/data";
-import { mediaUrl } from "@/lib/media";
 
 export const revalidate = 300;
 
@@ -24,7 +23,6 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: r.seo_title ?? r.name,
     description: r.seo_description ?? r.summary,
     alternates: { canonical: `/fleet/${r.slug}` },
-    openGraph: { images: [mediaUrl(r.hero_image).src] },
   };
 }
 
@@ -53,14 +51,14 @@ export default async function VesselPage({ params }: Params) {
         <dl className="specs" style={{ marginTop: 26 }}>
           {Object.entries(r.specs).map(([k, v]) => (
             <div key={k}>
-              <small>{k}</small>
-              <b>{v}</b>
+              <dt>{k}</dt>
+              <dd>{v}</dd>
             </div>
           ))}
         </dl>
       </PageHero>
 
-      <section className="band band-sand">
+      <section className="band">
         <div className="wrap detail">
           <div>
             <span className="eyebrow">About the boat</span>
@@ -91,7 +89,7 @@ export default async function VesselPage({ params }: Params) {
       </section>
 
       {terms ? (
-        <section className="band band-shell" aria-labelledby="charter-title">
+        <section className="band" aria-labelledby="charter-title">
           <div className="wrap">
             <SectionHead
               id="charter-title"
@@ -133,15 +131,17 @@ export default async function VesselPage({ params }: Params) {
         </section>
       ) : null}
 
-      <section className="band band-sand band-tight">
+      <Interlude line="Your date, your guests, your route." />
+      <section className="band band-tight">
         <div className="wrap">
           <SectionHead eyebrow="Gallery" title={`On board ${r.name}`} />
           <Gallery items={r.gallery} />
         </div>
       </section>
 
+      <Interlude line="Or join a shared trip on the same boat." />
       {related.length ? (
-        <section className="band band-ink">
+        <section className="band">
           <div className="wrap">
             <SectionHead
               eyebrow="Used for these experiences"

@@ -5,10 +5,9 @@ import { ArchImage, RevealLines } from "@/components/motion";
 import { EnquireButton } from "@/components/site/Enquiry";
 import { Gallery } from "@/components/site/Gallery";
 import { BreadcrumbJsonLd } from "@/components/site/JsonLd";
-import { CtaBand, Photo, Prose, SectionHead } from "@/components/site/ui";
+import { CtaBand, Interlude, Photo, Prose, SectionHead } from "@/components/site/ui";
 import { getPackage, getPackages } from "@/lib/data";
 import { formatDuration } from "@/lib/dates";
-import { mediaUrl } from "@/lib/media";
 
 export const revalidate = 300;
 
@@ -25,7 +24,6 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: p.seo_title ?? p.name,
     description: p.seo_description ?? p.summary,
     alternates: { canonical: `/experiences/${p.slug}` },
-    openGraph: { images: [mediaUrl(p.hero_image).src] },
   };
 }
 
@@ -46,7 +44,7 @@ export default async function ExperiencePage({ params }: Params) {
       />
 
       {/* Arch hero rather than full-bleed, so the two detail types differ. */}
-      <header className="hero hero-plain on-dark">
+      <header className="hero hero-plain">
         <div className="wrap split">
           <div className="hero-content">
             <nav aria-label="Breadcrumb" className="crumbs">
@@ -83,7 +81,7 @@ export default async function ExperiencePage({ params }: Params) {
         </div>
       </header>
 
-      <section className="band band-sand">
+      <section className="band">
         <div className="wrap detail">
           <div>
             <SectionHead eyebrow="What's included" title="The day, activity by activity" />
@@ -135,8 +133,9 @@ export default async function ExperiencePage({ params }: Params) {
         </div>
       </section>
 
+      <Interlude line="Bring a towel. We bring the rest." />
       {p.gallery.length ? (
-        <section className="band band-shell band-tight">
+        <section className="band band-tight">
           <div className="wrap">
             <SectionHead eyebrow="Gallery" title="On the day" />
             <Gallery items={p.gallery} />

@@ -1,3 +1,4 @@
+import { AtmosphereShell } from "@/components/atmosphere/PageAtmosphere";
 import { SmoothScroll } from "@/components/motion";
 import { EnquiryProvider } from "@/components/site/Enquiry";
 import { Footer } from "@/components/site/Footer";
@@ -11,11 +12,14 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         Skip to content
       </a>
       <SmoothScroll />
-      <Header />
-      <main id="main" className="site-main">
-        {children}
-      </main>
-      <Footer />
+      {/* One continuous atmosphere behind every page: docs/continuous-flow.md */}
+      <AtmosphereShell>
+        <Header />
+        <main id="main" className="site-main">
+          {children}
+        </main>
+        <Footer />
+      </AtmosphereShell>
       <WhatsAppFloat />
     </EnquiryProvider>
   );

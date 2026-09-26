@@ -20,7 +20,7 @@ export default function CreditsPage() {
         title="Photo credits"
         lede="Photographs on this site that were not taken by AquaSail, with their authors and licences."
       />
-      <section className="band band-sand">
+      <section className="band">
         <div className="wrap">
           <div className="tbl-wrap">
             <table className="tbl">
